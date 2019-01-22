@@ -44,7 +44,8 @@ In order to use your own data, you have to provide
 Have a look at the `generate_train_test_dc_noise()` function in `traffic_data/read_dc.py` for an example.
 
 In this example, we load traffic data. The original datasets can be found here: http://inrix.com/publicsector.asp
-our paper also inlcude epinion dataset: http://www.trustlet.org/downloaded, spammer dataset: https://linqs-data.soe.ucsc.edu/public/social_spammer/
+our paper also inlcude epinion dataset: http://www.trustlet.org/downloaded 
+spammer dataset: https://linqs-data.soe.ucsc.edu/public/social_spammer/
 
 ## Models
 
