@@ -39,7 +39,7 @@ python GCN_GRU.py
 
 In order to use your own data, you have to provide 
 * an N by N adjacency matrix (N is the number of nodes), and
-* an N by D feature matrix (D is the number of features per node) -- optional
+* an N by D by T feature matrix (D is the number of features per node, T is time length) -- optional
 
 Have a look at the `generate_train_test_dc_noise()` function in `traffic_data/read_dc.py` for an example.
 
