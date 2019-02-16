@@ -15,7 +15,7 @@ from sklearn.metrics import roc_auc_score
 from sklearn.metrics import average_precision_score
 
 from gcn_gru.optimizer import OptimizerAE, OptimizerVAE, OptimizerRNN
-from gcn_gru.model import GCNModelAE, GCNModelVAE, GCNModelRNN, GCNModelRNN_ori, GCNModelRNN_sparse
+from gcn_gru.model import GCNModelRNN, GCNModelRNN_ori, GCNModelRNN_sparse
 from gcn_gru.preprocessing import preprocess_graph, construct_feed_dict_rnn, sparse_to_tuple, mask_test_edge_opinion, construct_feed_dict_rnn_sparse
 from gcn_gru.traffic_data.read_dc import generate_train_test_dc_noise, generate_train_test_pa_noise
 
