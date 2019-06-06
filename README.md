@@ -68,10 +68,12 @@ If you have any question, please feel free to contact me. Email is good for me.
 Please cite our paper if you use this code in your own work:
 
 ```
-@article{xujiang2018gcn_gru,
+@inproceedings{zhao2018deep,
   title={Deep Learning for Predicting Dynamic Uncertain Opinions in Network Data},
-  author={Xujiang Zhao, Feng Chen and Jin-Hee Cho},
-  journal={Bigdata},
-  year={2018}
+  author={Zhao, Xujiang and Chen, Feng and Cho, Jin-Hee},
+  booktitle={2018 IEEE International Conference on Big Data (Big Data)},
+  pages={1150--1155},
+  year={2018},
+  organization={IEEE}
 }
 ```
