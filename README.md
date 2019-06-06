@@ -43,9 +43,10 @@ python GCN_GRU_sparse.py
 
 In order to use your own data, you have to provide 
 * an N by N adjacency matrix (N is the number of nodes), and
-* an N by D by T feature matrix (D is the number of features per node, T is time length) -- optional
+* an N by L by T ground truth matrix (L is the dimension of label per node, T is time length) 
+* an N by D by T feature matrix (D is the number of features per node, T is time length) -- optional (if you don't have feature, our model will use the indentity matrix as default feature)
 
-Have a look at the `generate_train_test_epinion()` function in `read_data/read_data.py` for an example.
+Have a look at the `generate_train_test_epinion() or generate_train_test_epinion_sparse()` function in `read_data/read_data.py` for an example.
 
 In this example, we load epinion data with a subgraph 500 nodes. The original datasets can be found here:http://www.trustlet.org/downloaded
 
@@ -53,7 +54,8 @@ In this example, we load epinion data with a subgraph 500 nodes. The original da
 ## Models
 
 For now, you can only choose the following model: 
-* `GCN-GRU`: GCN_GRU.py
+* `GCN-GRU`: GCN_GRU_run.py
+* `GCN-GRU (sparse)`: GCN_GRU_sparse.py
 
 I will upload the other baseline models later.
 
