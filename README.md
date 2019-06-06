@@ -32,25 +32,34 @@ GCN-GRU model are end-to-end trainable deep learning models for dynamic uncertai
 ## Run the demo
 
 ```bash
-python GCN_GRU.py
+python GCN_GRU_run.py
 ```
+If your graph is very large, please use
 
+```bash
+python GCN_GRU_sparse.py
+```
 ## Data
 
 In order to use your own data, you have to provide 
 * an N by N adjacency matrix (N is the number of nodes), and
 * an N by D by T feature matrix (D is the number of features per node, T is time length) -- optional
 
-Have a look at the `generate_train_test_dc_noise()` function in `traffic_data/read_dc.py` for an example.
+Have a look at the `generate_train_test_epinion()` function in `read_data/read_data.py` for an example.
 
-In this example, we load traffic data. The original datasets can be found here: http://inrix.com/publicsector.asp
-our paper also inlcude epinion dataset: http://www.trustlet.org/downloaded 
-spammer dataset: https://linqs-data.soe.ucsc.edu/public/social_spammer/
+In this example, we load epinion data with a subgraph 500 nodes. The original datasets can be found here:http://www.trustlet.org/downloaded
+
 
 ## Models
 
-You can choose the following model: 
+For now, you can only choose the following model: 
 * `GCN-GRU`: GCN_GRU.py
+
+I will upload the other baseline models later.
+
+## Models
+
+If you have any question, please feel free to contact me. Email is good for me. 
 
 ## Cite
 
