@@ -89,9 +89,7 @@ def generate_train_test_epinion(test_ratio, node):
 def generate_train_test_epinion_noise_sparse(test_ratio, node, noise):
     adj_index = np.load("read_data/adj_epinion_{}_index.npy".format(node))
     b_all = np.load("read_data/belief_feature_{}.npy".format(node))
-    # b_all = np.load("/network/rit/lab/ceashpc/xujiang/eopinion_data/feature/belief_feature_{}_noise.npy".format(node))
     u_all = np.load("read_data/uncertainty_feature_{}.npy".format(node))
-    # consis_index = np.load("/network/rit/lab/ceashpc/xujiang/eopinion_data/feature/consis_index_{}.npy".format(node))
     train_mask = []
     test_mask = []
     num_edge = b_all.shape[1]
@@ -100,8 +98,6 @@ def generate_train_test_epinion_noise_sparse(test_ratio, node, noise):
         train_mask_i, test_mask_i = get_mask(num_edge, test_num)
         train_mask.append(train_mask_i)
         test_mask.append(test_mask_i)
-    #b_all = add_noise(b_all, u_all, test_mask, noise, consis_index)
-    #b_all = np.load("/network/rit/lab/ceashpc/xujiang/eopinion_data/feature/belief_feature_47676_noise.npy")
     train_feature_b = np.array(b_all)
     train_feature_u = np.array(u_all)
     train_mask = np.reshape(train_mask, [1, train_feature_b.shape[0], train_feature_b.shape[1]])
@@ -116,9 +112,9 @@ def generate_train_test_epinion_noise_sparse(test_ratio, node, noise):
     return adj, train_feature_b, train_feature_u, train_mask, test_mask
 
 def generate_train_test_epinion_sparse(test_ratio, node):
-    adj_index = np.load("/network/rit/lab/ceashpc/xujiang/eopinion_data/adj_epinion_{}_index.npy".format(node))
-    b_all = np.load("/network/rit/lab/ceashpc/xujiang/eopinion_data/feature/belief_feature_{}.npy".format(node))
-    u_all = np.load("/network/rit/lab/ceashpc/xujiang/eopinion_data/feature/uncertainty_feature_{}.npy".format(node))
+    adj_index = np.load("read_data/adj_epinion_{}_index.npy".format(node))
+    b_all = np.load("read_data/belief_feature_{}.npy".format(node))
+    u_all = np.load("read_data/uncertainty_feature_{}.npy".format(node))
     train_mask = []
     test_mask = []
     num_edge = b_all.shape[1]
