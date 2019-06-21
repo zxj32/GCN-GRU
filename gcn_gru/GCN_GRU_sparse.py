@@ -18,7 +18,7 @@ from gcn_gru.optimizer import OptimizerAE, OptimizerVAE, OptimizerRNN
 from gcn_gru.input_data import load_data, load_data_1
 from gcn_gru.model import GCNModelAE, GCNModelVAE, GCNModelRNN, GCNModelRNN_ori, GCNModelRNN_sparse
 from gcn_gru.preprocessing import preprocess_graph, construct_feed_dict_rnn, sparse_to_tuple, construct_feed_dict_rnn_sparse
-from gcn_gru.read_data.read_data import generate_train_test_epinion_noise, generate_train_test_epinion_noise_sparse
+from gcn_gru.read_data.read_data import generate_train_test_epinion_sparse
 
 # Settings
 flags = tf.app.flags
@@ -40,7 +40,7 @@ random.seed(seed)
 
 print("seed:", seed, "hidden_units:", FLAGS.hidden_units, "dropout:", FLAGS.dropout, "learning rate:", FLAGS.learning_rate, "test_ratio:", FLAGS.test_ratio, "noise:", FLAGS.noise, "bias:", FLAGS.bias, "node:", FLAGS.node)
 
-adj, label_b, label_u, train_mask, test_mask = generate_train_test_epinion_noise_sparse(FLAGS.test_ratio, FLAGS.node, FLAGS.noise)
+adj, label_b, label_u, train_mask, test_mask = generate_train_test_epinion_sparse(FLAGS.test_ratio, FLAGS.node)
 
 features = []
 if FLAGS.features == 0:
