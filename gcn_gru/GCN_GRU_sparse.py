@@ -18,7 +18,7 @@ from gcn_gru.optimizer import OptimizerAE, OptimizerVAE, OptimizerRNN
 from gcn_gru.input_data import load_data, load_data_1
 from gcn_gru.model import GCNModelAE, GCNModelVAE, GCNModelRNN, GCNModelRNN_ori, GCNModelRNN_sparse
 from gcn_gru.preprocessing import preprocess_graph, construct_feed_dict_rnn, sparse_to_tuple, construct_feed_dict_rnn_sparse
-from gcn_gru.traffic_data.read_dc import generate_train_test_epinion_noise, generate_train_test_epinion_noise_sparse
+from gcn_gru.read_data.read_data import generate_train_test_epinion_noise, generate_train_test_epinion_noise_sparse
 
 # Settings
 flags = tf.app.flags
